@@ -20,7 +20,7 @@ function testSchema() {
         base: logger.bindings(), // Copy base metadata from main logger
         timestamp: pino.stdTimeFunctions.isoTime,
         formatters: {
-            level: (label) => ({ log_level: label.toUpperCase() })
+            level: (label) => ({ level: label.toUpperCase() })
         }
     }, stream);
 
@@ -39,7 +39,7 @@ function testSchema() {
             assert.strictEqual(log.msg, testMsg, 'Message mismatch');
             assert.ok(log.service_name, 'service_name missing');
             assert.ok(log.instance_id, 'instance_id missing');
-            assert.ok(log.log_level, 'log_level missing');
+            assert.ok(log.level, 'level missing');
             assert.ok(log.time, 'timestamp missing');
             
             console.log('✅ JSON Schema Validation Passed');
