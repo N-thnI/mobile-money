@@ -1,0 +1,23 @@
+{
+  "name": "mobile-money",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test-logger.js",
+    "lint": "npx eslint .",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "pino": "^10.3.1",
+    "pino-loki": "^3.0.0",
+    "uuid": "^14.0.0"
+  },
+  "devDependencies": {
+    "pino-pretty": "^13.1.3"
+  }
+}
